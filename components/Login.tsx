@@ -76,7 +76,7 @@ useEffect(() => {
       ) : (
         <div className="space-y-6 text-center">
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold text-zinc-900">Welcome Back</h2>
+            <h2 className="text-2xl font-bold text-zinc-900">Welcome to AI Story Studio</h2>
             <p className="text-zinc-500">Sign in to your account using Google</p>
           </div>
           <button
