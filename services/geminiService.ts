@@ -36,7 +36,7 @@ async function generateWithFallback(params: {
   try {
     // Thử dùng bản Pro trước
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-pro",
+      model: "gemini-3-flash-review",
       contents: params.contents,
       config: {
         systemInstruction: params.systemInstruction,
@@ -51,7 +51,7 @@ async function generateWithFallback(params: {
       console.warn("Gemini Pro hit quota, falling back to Flash...");
       // Fallback sang Flash (Giới hạn cao hơn nhiều)
       const flashResponse = await ai.models.generateContent({
-        model: "gemini-1.5-flash",
+        model: "gemini-3-flash-review",
         contents: params.contents,
         config: {
           systemInstruction: params.systemInstruction + " (Lưu ý: Bạn đang ở chế độ dự phòng, hãy viết nhanh và súc tích hơn nhưng vẫn giữ đúng bối cảnh).",
