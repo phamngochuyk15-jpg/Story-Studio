@@ -36,7 +36,7 @@ async function generateWithFallback(params: {
   try {
     // Thử dùng bản Pro trước
     const response = await ai.models.generateContent({
-      model: "gemini-3-pro-review",
+      model: "gemini-3-pro",
       contents: params.contents,
       config: {
         systemInstruction: params.systemInstruction,
